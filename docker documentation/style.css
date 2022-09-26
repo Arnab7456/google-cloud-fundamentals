@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar { width: 16px; }
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+  border: 4px solid;
+}
+.light-theme::-webkit-scrollbar-thumb { border-color: hsl(0, 84%, 48%); }
+
+/* HEADER */
+header { background: var(--background-primary); }
+
+header .flex-wrapper { display: none; }
+
+.navbar {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.logo-light,
+.logo-dark { display: none; }
+
+.light-theme .logo-light,
+.dark-theme .logo-dark { display: block; }
+
+header .btn-group {
+  display:     flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-btn-mobile,
+.nav-menu-btn,
+.nav-close-btn {
+  background: var(--action-secondary);
+  color: var(--foreground-tertiary);
+  width:  40px;
+  height: 40px;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+:is(.theme-btn-mobile,
+.nav-menu-btn,
+.nav-close-btn):hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.theme-btn-mobile ion-icon { display: none; }
+
+.theme-btn-mobile.light .sun,
+.theme-btn-mobile.dark .moon { display: block; }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--background-primary);
+  padding: 70px 20px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: 0.5s cubic-bezier(1, 0, 0.30, 0.70);
+  z-index: 10;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.nav-close-btn {
+  position: absolute;
+  top:   20px;
+  right: 20px;
+}
+
+.mobile-nav .wrapper {
+  padding-bottom: 1.25rem;
+  margin-bottom:  1.25rem;
+  border-bottom: 1px solid var(--action-primary);
+}
+
+.mobile-nav .nav-title { margin-bottom: 1rem; }
+
+.mobile-nav .nav-item { margin-bottom: 0.5rem; }
+
+.mobile-nav .nav-link {
+  font-size: var(--fs-3);
+  color: var(--foreground-secondary);
+}
+
+.mobile-nav .nav-link:hover { color: var(--accent); }
+
+
+
+.size em {
+    font-size: 30px;
+}
+.h{
+    margin: 10px;
+    color: blue;
+    position: relative;
+    text-align: center;
+
+}
+.size{
+    text-align: center;
+}
+
+.box1{
+    position: relative;
+    /* width: 370px;
+    height: 300px;
+    border: 2px solid rgba(20, 19, 19, 0);
+    border-radius: 5px;
+    background-color: rgb(205, 194, 242); */
+    top: 50px;
+    left: 40px;
+}/* }
+.box1 h2{
+    color: blueviolet;
+    text-decoration-line: underline;
+    text-decoration-color:black ;
+
+}
+.box1 ul{
+        font-size: 20px;
+} */
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-style:2PX solid;
+    border-width: 1px;
+  } 
+.docker1{
+font-size: 20px;
+}
+.docker1 strong{
+    position: relative;
+    font-size: 25px;
+    left: 300px;
+}
+.docker1 p{
+    position: relative;
+    width: 900px;
+    height: 100px;
+    left: 300px;
+}
+.doc{
+    position: relative;
+    text-align: center;
+}
+.doc img{
+  border-radius: 10%;
+}
+.box1 strong{
+    font-size: 25px;
+    color: blue;
+
+}
+.box1 p{
+    font-size: 20px;
+    background-color: aquamarine;
+    color: black;
+    width: 200px;
+    height: 25px;
+   
+}
+.Intro{
+    font-size: 20px;
+}
+
+
+
+/* dabhajshd */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.base{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+.base{
+    position: relative;
+    top: 50px;
+    height: 50px;
+}
+.base p{
+  position: relative;
+  bottom: 40px;
+  left: 470px;
+}
+nav{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dbe0f5;
+  width: 500px;
+  height: 40px;
+  line-height: 40px;
+  border: 2PX solid black;
+  padding: 8px 25px;
+  border-radius: 5px;
+}
+nav label{
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+}
+.button span{
+  float: right;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.button span.rotate{
+  transform: rotate(-180deg);
+}
+nav ul{
+  position: absolute;
+  background: #fcfcfcfb;
+  list-style: none;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  display: none;
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+nav .menu:before{
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: #211919;
+  right: 20px;
+  top: -10px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+nav ul li{
+  line-height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(235, 8, 8, 0.979);
+}
+nav ul li label{
+  font-size: 18px;
+}
+nav ul li a{
+  color: rgb(0, 1, 6);
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+nav ul li a:hover,
+nav ul li label:hover{
+  color: rgb(255, 115, 0);
+}
+nav ul ul{
+  position: static;
+}
+nav ul ul li{
+  line-height: 30px;
+  padding-left: 30px;
+  border-bottom: none;
+}
+nav ul ul li a{
+  color: #000000;
+  font-size: 17px;
+}
+nav ul li span{
+  font-size: 20px;
+  float: right;
+  margin-top: 10px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+nav ul li span.rotate{
+  transform: rotate(-180deg);
+}
+input{
+  display: none;
+}
+
+.side{
+  width: 310px;
+  height: 390px;
+  float: right;
+  font-size: 25px;
+  /* text-align: center; */
+  border: 2px solid black;
+  position: relative;
+  top: 10px;
+  bottom: 200px;
+  right: 50px;
+  border-radius: 14pt;
+  background-color: rgb(229, 214, 239);
+  color: rgb(17, 17, 16);
+}
+.side h3{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: double;
+}
